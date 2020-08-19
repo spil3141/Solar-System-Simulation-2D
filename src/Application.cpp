@@ -5,11 +5,10 @@
 #include <SFML/Graphics.hpp> //Vector2i RenderWindow VideoMode
 #include "planet1_Pawn.h"
 #include "planet2_Pawn.h"
-#include "planet3_Pawn.h"
 
 
 //holds the window size 
-sf::Vector2i viewSize(800, 800);
+sf::Vector2i viewSize(1300, 900);
 //The viewMode is a SFML class that sets the width and the height of the window.
 sf::VideoMode vm(viewSize.x, viewSize.y);
 //Create a window 
@@ -21,7 +20,6 @@ sf::Sprite bgSprite;
 
 planet1_Pawn planet1;
 planet2_Pawn planet2;
-planet3_Pawn planet3;
 
 
 
@@ -71,14 +69,14 @@ static void BeginPlay(sf::RenderWindow &window)
 	window.draw(bgSprite);
 	window.draw(planet1);
 	window.draw(planet2);
-	window.draw(planet3);
+	//window.draw(planet3);
 }
 
 static void Tick(float deltaTime)
 {
 	planet1.Tick(deltaTime);
 	planet2.Tick(deltaTime);
-	planet3.Tick(deltaTime);
+	//planet3.Tick(deltaTime);
 
 }
 
@@ -104,13 +102,10 @@ int main()
 	//Planets
 	planet1.BeginPlay("Content/graphics/Planet-1.png",
 		sf::Vector2f((float)viewSize.x/2,
-			(float)viewSize.y/2),70.0f);
+			(float)viewSize.y/2),1.0f);
 	planet2.BeginPlay("Content/graphics/Planet-2.png",
-		sf::Vector2f((float)viewSize.x / 2, (float)viewSize.y / 2) + sf::Vector2f(160.0f,160.0f),
-		50.0f);
-	planet3.BeginPlay("Content/graphics/Planet-3.png",
-		sf::Vector2f((float)viewSize.x / 2, (float)viewSize.y / 2) + sf::Vector2f(-160.0f, -160.0f),
-		50.0f);
+		sf::Vector2f((float)viewSize.x / 2, (float)viewSize.y / 2) + sf::Vector2f(200.0f,200.0f),
+		1.0f);
 	
 
 
@@ -125,9 +120,21 @@ int main()
 		
 
 		//deltaTime Clock
-		dt = dtClock.restart();
 		BeginPlay(window);
-		Tick(dt.asSeconds());
+		dt = dtClock.restart();
+		float deltaTime = dt.asSeconds();
+		if (deltaTime > 0.001)
+			deltaTime = 0.001;
+		else
+			deltaTime = dt.asSeconds();
+		Tick(deltaTime);
+		sf::Vertex line[] =
+		{
+			sf::Vertex(sf::Vector2f(planet1.getPosition().x,planet1.getPosition().y)),
+			sf::Vertex(sf::Vector2f(planet2.getPosition().x,planet2.getPosition().y))
+		};
+
+		window.draw(line, 2, sf::Lines);
 
 		//Render Game Objects
 		window.display();

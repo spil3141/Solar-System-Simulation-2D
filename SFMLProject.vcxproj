@@ -94,13 +94,12 @@
     <ClCompile Include="src\planet1_Pawn.cpp" />
     <ClCompile Include="src\Pawn.cpp" />
     <ClCompile Include="src\Application.cpp" />
-    <ClCompile Include="src\planet3_Pawn.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\planet2_Pawn.h" />
-    <ClInclude Include="src\planet3_Pawn.h" />
     <ClInclude Include="src\planet1_Pawn.h" />
     <ClInclude Include="src\Pawn.h" />
+    <ClInclude Include="src\Tiny.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
