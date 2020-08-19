@@ -5,4 +5,4 @@
   - a static and a dynamic body affected by simulated gravity.  
 
 # Screenshot
-![screenshot_1](https://mega.nz/file/uj5CjAxY#j9mIDfhxoA-oaM37xZsVnrFPx9wIfDbQoFVQ7m5-yfw](https://mega.nz/file/uj5CjAxY#j9mIDfhxoA-oaM37xZsVnrFPx9wIfDbQoFVQ7m5-yfw)
+![Screenshot.png](https://trello-attachments.s3.amazonaws.com/5dd6b3a80a513e0ac0bd38eb/5f3bba93fe4f8c14ff6b2f6c/84d87068531fa2692287b2e229939df5/Screenshot.png)
