@@ -12,4 +12,4 @@ The graphics API (SFML) is added to this github repository as a submodule theref
 #### Steps
 - Clone or Download this repository 
 - ** Make sure to check the recursive submodule option while cloning**
-- use "Cmake" to [build](https://www.youtube.com/watch?v=pLy69V2F_8M) SFML from source, we need the DLL for our c++ linker (dynamic library/.dll) 
+- use "Cmake" to [build SFML](https://www.youtube.com/watch?v=pLy69V2F_8M) from source, this is because we need the DLL for our [c++ linker](https://www.youtube.com/watch?v=H4s55GgAg0I&t=259s) (dynamic library/.dll) 
