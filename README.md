@@ -10,6 +10,6 @@
 ## How to Setup
 The graphics API (SFML) is added to this github repository as a submodule therefore there are additional steps to the the "C++ Linker" connected to the "dynamic libraries" of SFML. 
 #### Steps
-- Clone or Download this repository 
+- Clone or download this repository : [github repository](https://github.com/spil3141/Solor-System-Simulation-2D.git)
 - ** Make sure to check the recursive submodule option while cloning**
 - use "Cmake" to [build SFML](https://www.youtube.com/watch?v=pLy69V2F_8M) from source, this is because we need the DLL for our [c++ linker](https://www.youtube.com/watch?v=H4s55GgAg0I&t=259s) (dynamic library/.dll) 
