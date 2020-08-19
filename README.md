@@ -16,4 +16,4 @@ The graphics API (SFML) is added to this github repository as a submodule theref
 - create a folder in the SFML folder (this folder should be inside our Dependencies folder) and call the folder "lib"
 - cmake build the project and generate a folder with the name "lib", copy all files from this copy into the new "lib" folder you created inside the SFML submodule folder. 
 - the result should look like this : 
-![]
+![image.png](https://trello-attachments.s3.amazonaws.com/5dd6b3a80a513e0ac0bd38eb/5f3bba93fe4f8c14ff6b2f6c/92dd2d92e63b7dc3b7ec1e6fde804f7d/image.png) 
