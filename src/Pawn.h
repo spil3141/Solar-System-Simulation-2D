@@ -5,9 +5,9 @@
 
 class Pawn : public sf::Sprite
 {	
-protected:
+public:
 	float m_Mass;
-	const float m_G = 1200.8f;
+	const float m_G = 9.8f;
 	sf::Texture m_Texture;
 	sf::Vector2f InitPosition;
 	sf::Vector2f m_CurrentVelocity;

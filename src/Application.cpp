@@ -5,6 +5,7 @@
 #include <SFML/Graphics.hpp> //Vector2i RenderWindow VideoMode
 #include "planet1_Pawn.h"
 #include "planet2_Pawn.h"
+#include "planet3_Pawn.h"
 
 
 //holds the window size 
@@ -17,11 +18,13 @@ sf::RenderWindow window(vm, "Basic Solar System Simulation 2D");
 sf::Texture bgTexture;
 sf::Sprite bgSprite;
 
+#include <vector>
+
+std::vector<Pawn*> planets;
 
 planet1_Pawn planet1;
 planet2_Pawn planet2;
-
-
+planet3_Pawn planet3;
 
 
 
@@ -69,14 +72,14 @@ static void BeginPlay(sf::RenderWindow &window)
 	window.draw(bgSprite);
 	window.draw(planet1);
 	window.draw(planet2);
-	//window.draw(planet3);
+	window.draw(planet3);
 }
 
 static void Tick(float deltaTime)
 {
 	planet1.Tick(deltaTime);
 	planet2.Tick(deltaTime);
-	//planet3.Tick(deltaTime);
+	planet3.Tick(deltaTime);
 
 }
 
@@ -102,10 +105,17 @@ int main()
 	//Planets
 	planet1.BeginPlay("Content/graphics/Planet-1.png",
 		sf::Vector2f((float)viewSize.x/2,
-			(float)viewSize.y/2),1.0f);
+			(float)viewSize.y/2),20.0f);
 	planet2.BeginPlay("Content/graphics/Planet-2.png",
 		sf::Vector2f((float)viewSize.x / 2, (float)viewSize.y / 2) + sf::Vector2f(200.0f,200.0f),
-		1.0f);
+		20.0f);
+	planet3.BeginPlay("Content/graphics/Planet-2.png",
+		sf::Vector2f((float)viewSize.x / 2, (float)viewSize.y / 2) + sf::Vector2f(-200.0f, -200.0f),
+		20.0f);
+
+	planets.push_back(&planet1);
+	planets.push_back(&planet2);
+	planets.push_back(&planet3);
 	
 
 
@@ -124,17 +134,23 @@ int main()
 		dt = dtClock.restart();
 		float deltaTime = dt.asSeconds();
 		if (deltaTime > 0.001)
-			deltaTime = 0.001;
+			deltaTime = 0.001f;
 		else
 			deltaTime = dt.asSeconds();
 		Tick(deltaTime);
-		sf::Vertex line[] =
+		/*sf::Vertex line1[] =
 		{
-			sf::Vertex(sf::Vector2f(planet1.getPosition().x,planet1.getPosition().y)),
-			sf::Vertex(sf::Vector2f(planet2.getPosition().x,planet2.getPosition().y))
+			sf::Vertex(sf::Vector2f(planet1.getPosition().x,planet1.getPosition().y),sf::Color::Red),
+			sf::Vertex(sf::Vector2f(planet2.getPosition().x,planet2.getPosition().y),sf::Color::Green)
+		};
+		sf::Vertex line2[] =
+		{
+			sf::Vertex(sf::Vector2f(planet1.getPosition().x, planet1.getPosition().y)),
+				sf::Vertex(sf::Vector2f(planet3.getPosition().x, planet3.getPosition().y))
 		};
 
-		window.draw(line, 2, sf::Lines);
+		window.draw(line1, 2, sf::Lines);
+		window.draw(line2, 2, sf::Lines);*/
 
 		//Render Game Objects
 		window.display();
@@ -168,3 +184,4 @@ int main()
 	_getch();
 	return 0;
 }
+

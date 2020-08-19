@@ -1,17 +1,17 @@
 #include "Tiny.h"
-#include "planet1_Pawn.h"
+#include "planet3_Pawn.h"
 
 extern std::vector<Pawn*> planets;
 
-void planet1_Pawn::BeginPlay(std::string texturefile, sf::Vector2f initposition, float mass)
+void planet3_Pawn::BeginPlay(std::string texturefile, sf::Vector2f initposition, float mass)
 {
 	Pawn::BeginPlay(texturefile, initposition, mass);
 
-	sf::Vector2f InitVelocity = sf::Vector2f(-200.0f, 200.0f);
+	sf::Vector2f InitVelocity = sf::Vector2f(100.0f, -100.0f);
 	this->m_CurrentVelocity = InitVelocity;
 }
 
-void planet1_Pawn::Tick(float deltaTime)
+void planet3_Pawn::Tick(float deltaTime)
 {
 	Pawn::Tick(deltaTime);
 
@@ -33,7 +33,7 @@ void planet1_Pawn::Tick(float deltaTime)
 
 			//calculate the velocity 
 			sf::Vector2f velocity = direction * GForce * deltaTime;
-			
+
 
 			if (magnitude > 20.0f)
 				this->m_CurrentVelocity += velocity;
