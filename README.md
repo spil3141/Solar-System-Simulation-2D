@@ -5,7 +5,7 @@
   - a static and a dynamic body affected by simulated gravity.  
 
 ## Screenshot
-![Screenshot.png](https://trello-attachments.s3.amazonaws.com/5dd6b3a80a513e0ac0bd38eb/5f3bba93fe4f8c14ff6b2f6c/84d87068531fa2692287b2e229939df5/Screenshot.png)
+![image.png](https://trello-attachments.s3.amazonaws.com/5f066448ad4865740ae83658/5f3b227970dadc452aaf969c/9c42589a569e75e72a82a5d932e960a4/image.png) 
 
 ## How to Setup
 The graphics API (SFML) is added to this github repository as a submodule therefore there are additional steps to get the "C++ Linker" connected to the "dynamic libraries" of SFML. 
