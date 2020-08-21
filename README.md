@@ -1,14 +1,12 @@
 # Solor-System-Simulation-2D
 
-### Exercise project using SFML Graphics API 
-- a simple 2D physics simulation:
+An exercise project using SFML Graphics API, the project is a simple 2D physics simulation:
   - a static and a dynamic body affected by simulated gravity.  
 
 ## Screenshot
 ![GifMaker_20200821135207666.gif](https://trello-attachments.s3.amazonaws.com/5f066448ad4865740ae83658/5f3b227970dadc452aaf969c/7c9420361789c2e2e9989075cb434c57/GifMaker_20200821135207666.gif) 
 
 ## Getting Started
----
 The graphics API (SFML) is added to this github repository as a submodule therefore there are additional steps to get the "C++ Linker" connected to the "dynamic libraries" of SFML. 
 #### Steps
 - Clone or download this repository : [github repository](https://github.com/spil3141/Solor-System-Simulation-2D.git)
