@@ -1,4 +1,4 @@
-# Solor-System-Simulation-2D
+# Solar-System-Simulation-2D
 
 An exercise using the SFML graphics API, the project is a 2D physics simulation in which entities are affected by simulated gravity.  
 
@@ -8,7 +8,7 @@ An exercise using the SFML graphics API, the project is a 2D physics simulation 
 ## Getting Started
 SFML API was added to this github repository as a submodule therefore there are additional steps to get the "C++ Linker" connected to the "dynamic libraries" of SFML. The steps are listed below.  
 #### Steps
-- Clone or download this repository : [github repository](https://github.com/spil3141/Solor-System-Simulation-2D.git)
+- Clone or download this repository : [github repository](https://github.com/spil3141/Solar-System-Simulation-2D.git)
 - **Make sure that you do a [--recursive](https://git-scm.com/book/en/v2/Git-Tools-Submodules) clone to fetch all submodules**
 - use "Cmake" to [build SFML](https://www.youtube.com/watch?v=pLy69V2F_8M) from source, this is because we need the DLL for our [c++ linker](https://www.youtube.com/watch?v=H4s55GgAg0I&t=259s) (dynamic library/.dll) 
 - create a folder in the SFML folder (this folder should be inside our Dependencies folder) and call the folder "lib"
